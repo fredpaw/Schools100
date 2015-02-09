@@ -61,8 +61,8 @@ load_theme_textdomain( 'devdmbootstrap3', get_template_directory() . '/languages
 
     $defaults = array(
         'default-image'          => get_template_directory_uri() . '/img/deafaultlogo.png',
-        'width'                  => 300,
-        'height'                 => 100,
+        'width'                  => 173,
+        'height'                 => 239,
         'flex-height'            => true,
         'flex-width'             => true,
         'default-text-color'     => '000',
