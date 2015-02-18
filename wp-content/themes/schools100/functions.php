@@ -130,10 +130,6 @@ function devdmbootstrap3_main_content_width_columns () {
         $columns = $columns - $dm_settings['right_sidebar_width'];
     }
 
-    if ($dm_settings['left_sidebar'] != 0) {
-        $columns = $columns - $dm_settings['left_sidebar_width'];
-    }
-
     echo $columns;
 }
 

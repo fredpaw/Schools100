@@ -1,7 +1,7 @@
 body {
 
   /* For the Footer Menu */
-  padding-bottom: 51px;
+  //padding-bottom: 51px;
 
 }
 
@@ -11,66 +11,92 @@ body {
 
 
 .dmbs-container {
-
+    background-color:@brand-header-bg;
 }
 
 .dmbs-header {
     background-color:@brand-header-bg;
+    .dmbs-header-text {
+        h1 a {
+            color:@brand-header;
+            &:hover,
+            &:active {
+                text-decoration:none;
+            }
+        }
+        h4 {
+            color:@brand-header;
+        }
+    }
 }
 
 .dmbs-header-img {
-
+    background-color:@brand-header-bg;
+    padding:0px;
 }
 
 .dmbs-header-text {
-
+    background-color:@brand-header-bg;
 }
 
 .dmbs-top-menu {
     .navbar {
         margin-bottom:0px;
         border:0px;
-        .container {
-            background-color:@brand-header-bg;
-            .navbar-nav {
-                > li > a {
-                    color:@gray-darker;
-                    cursor:pointer;
-                    &:hover {
-                        color:@white;
-                        background-color:@navbar-nav-hover;
-                    }
-                    &:focus {
-                        color:@gray-darker;
-                        background-color:@brand-header-bg;
-                    }
-                }
-                > .active > a {
-                    &,
-                    &:hover,
-                    &:focus {
-                        color:@gray-darker;
-                        background-color:@brand-header-bg;
-                    }
-                }
-                > .disable > a {
-                    &,
-                    &:hover,
-                    &:focus {
-                        color:@gray-darker;
-                        background-color:@brand-header-bg;
-                    }
-                }
-                    
+        .navbar-header {
+            button {
+                
             }
-            .dropdown-menu {
-                padding:0px;
-                >li > a {
-                    color:@white;
-                    background-color:@navbar-nav-hover;
-                    &:hover,
-                    &:focus {
-                        background-color:@navbar-nav-hover-dark;
+        }
+        .navbar-collapse{
+            @media (max-width: @screen-xs-max) {
+                
+            }
+            @media (min-width: @screen-xs-max) and (max-width: @screen-sm-min) {
+                .navbar-nav {
+                    width:10%;
+                    > li {
+                        float:left;
+                        width:10%;
+                    }
+                }
+            }
+            @media (min-width: @screen-sm-min) {
+                padding:20px 0;
+                background-color:@brand-header-bg;
+                .navbar-nav {
+                    width:100%;
+                    > li {
+                        float:none;
+                        width:100%;
+                        background-color:@brand-header-bg;
+                        height:30px;
+                        > a {
+                            color:@navbar-font-color;
+                            cursor:pointer;
+                            background-color:@brand-header-bg;
+                            text-align:center;
+                            padding:5px;
+                            &:hover {
+                                color:@white;
+                                background-color:@navbar-nav-hover;
+                            }
+                            &:focus {
+                                color:@gray-darker;
+                                background-color:@brand-header-bg;
+                            }
+                        }
+                    }
+                    .dropdown-menu {
+                        padding:0px;
+                        >li > a {
+                            color:@white;
+                            background-color:@navbar-nav-hover;
+                            &:hover,
+                            &:focus {
+                                background-color:@navbar-nav-hover-dark;
+                            }
+                        }
                     }
                 }
             }
@@ -79,15 +105,155 @@ body {
 }
 
 .dmbs-content {
-
+    background-image: url("../img/bg.png");
+    background-repeat: repeat-y;
 }
 
 .dmbs-main {
+    .top-search {
+        background-color:@search-bg;
+        padding:15px;
+        margin-bottom:20px;
+        #searchform {
+            > div {
+                > label {
+                    display:none;
+                }
+                #s {
+                    height:40px;
+                    line-height:40px;
+                    float:left;
+                    border-top-right-radius:0;
+                    border-bottom-right-radius:0;
+                    box-shadow:none;
+                    -webkit-box-shadow:none;
+                    border-right:0px;
+                    @media (max-width: @screen-xs-max){
+                        width:85%;
+                    }
+                    @media (min-width: @screen-xs-max){
+                        width:92%;
+                    }
+                }
+                #searchsubmit{
+                    padding:0px;
+                    margin:0px;
+                    text-indent:-10000px;
+                    height:40px;
+                    display:inline;
+                    float:left;
+                    clear:right;
+                    border-top-left-radius:0;
+                    border-bottom-left-radius:0;
+                    @media (max-width: @screen-xs-max){
+                        background:url("../img/t_c-search.png") no-repeat center;
+                        background-color:@white;
+                        border:solid 1px @white-dark;
+                        border-left:none;
+                        width:15%;
+                    }
+                    @media (min-width: @screen-xs-max){
+                        background:url("../img/t_c-search_white.png") no-repeat center;
+                        background-color:@navbar-nav-hover;
+                        width:8%;
+                        border:none;
+                        &:hover,
+                        &:focus {
+                            opacity:0.8;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .recent_news_scroll {
+        margin-bottom:20px;
+    }
+    
+    .schools-images {
+        margin-top:20px;
+        .school-thumbs {
+            > div {
+                margin-bottom:20px;
+                a {
+                    &:hover,
+                    &:active {
+                        opacity:0.8;
+                    }
+                }
+                img {
+                        width:100%;
+                        height:100%;
+                }
+            }
+        }
+    }
+    
+    .sina-youku {
+        .youku {
+            .youku-videos{
+                @media (max-width: @screen-xs-max) {
+                    padding-left:10px;
+                }
+                @media (min-width: @screen-xs-max) {
+                    padding-left:0px;
+                }
+            }
+            .youku-list {
+                div {
+                    padding:0;
+                    background-color:#303030;
+                }
+            }
+        }
+    }
+}
 
+.sidbar-left {
+     
 }
 
 .dmbs-left {
-
+    padding:0px;
+    margin:0px;
+    background-color:@brand-header-bg;
+    #wpcf7-f9-o1 {
+         .wpcf7-form {
+             background:url("../img/contac_form-bg.png") no-repeat;
+             background-color: @search-bg;
+             padding:70px 20px 30px 20px;
+             .row {
+                 margin:10px;
+                 padding:0px;
+                 > div {
+                     margin:0px;
+                     padding:0px;
+                     label {
+                         color:@white;
+                     }
+                     .wpcf7-form-control-wrap {
+                         input, textarea {
+                             display:inline-block;
+                             border:solid 1px @white;
+                             border-radius:5px;
+                         }
+                     }
+                     .wpcf7-submit {
+                         background:url("../img/form_submit.png") no-repeat center;
+                         width:158px;
+                         height:60px;
+                         text-indent:-10000px;
+                         padding:0px;
+                         margin-top:10px;
+                     }
+                     .ajax-loader {
+                         display:none;
+                     }
+                 }
+             }
+         }
+     }
 }
 
 .dmbs-right {
@@ -104,4 +270,95 @@ body {
 
 .dmbs-footer {
 
+}
+
+.more-info {
+    margin-top:20px;
+    > div {
+        margin-bottom:10px;
+    }
+}
+
+.office-contact {
+    background-color:@white;
+    margin:0;
+    margin-top:10px;
+    .office-email {
+        p {
+            margin:0px;
+            padding:10px 0;
+            font-weight:bold;
+            font-size:16px;
+        }
+    }
+    .office-address {
+        margin:0px;
+        > div {
+            margin:0px;
+            > div {
+                margin:5px;
+                padding:10px;
+                background-color:@brand-header-bg;
+                h5 {
+                    font-weight:bold;
+                }
+                p {
+                    margin-bottom:5px;
+                }
+            }
+        }
+    }
+}
+
+.school-contact {
+    background-color:@white;
+    margin:0;
+    padding:0 20px 10px 20px;
+    margin-bottom:10px;
+    .schools-contact-title {
+        margin-bottom:10px;
+        border-bottom:solid 1px #303030;
+        h4 {
+            font-weight:bold;
+        }
+    }
+    .schools-contact-link {
+        margin:0px;
+        p {
+            margin:0px;padding:0px;
+            a{
+                color:#303030;
+                font-size:12px;
+                &:hover {
+                    text-decoration:none;
+                }
+            }
+        }
+    }
+}
+
+.footer-link {
+    background-color:@footer-link-bg;
+    padding:20px;
+    > div {
+        padding-left:20px;
+        margin:none;
+        h4 {
+            color:@white;
+            font-weight:bold;
+        }
+        p {
+            margin-bottom:5px;
+            a{
+                color:@white;
+                &:hover {
+                    text-decoration:none;
+                }
+            }
+        }
+    }
+}
+
+.copyright {
+    padding-top:15px;
 }

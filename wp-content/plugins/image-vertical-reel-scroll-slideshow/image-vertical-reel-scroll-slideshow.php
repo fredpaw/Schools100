@@ -290,7 +290,7 @@ function ivrss_shortcode( $atts )
 			$ivrss_count++;
 		}
 	
-		$ivrss_scrollerheight = $ivrss_scrollerheight + 4;
+		$ivrss_scrollerheight = $ivrss_scrollerheight + 0;
 		if($ivrss_count >= $ivrss_scrollercount)
 		{
 			$ivrss_count = $ivrss_scrollercount;

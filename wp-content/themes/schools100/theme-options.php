@@ -145,7 +145,11 @@ load_theme_textdomain( 'devdmbootstrap3', get_template_directory() . '/languages
         '5' => array (
             'value' => '5',
             'label' => '5'
-        )
+        ),
+		'12' => array (
+			'value' => '12',
+			'label' => '12',
+		)
 
     );
 
