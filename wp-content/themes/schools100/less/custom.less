@@ -9,6 +9,23 @@ body {
   clear: both;
 }
 
+#floatTools {
+        @media (max-width:@screen-xs-max) {
+            #aFloatTools_Hide {
+                display:none;
+            }
+        }
+        @media (min-width:@screen-xs-max) {
+            #aFloatTools_Show {
+                display:none;
+            }            
+        }
+    #divFloatToolsView {
+        @media (max-width:@screen-xs-max) {
+            display:none;
+        }
+    }
+}
 
 .dmbs-container {
     background-color:@brand-header-bg;
@@ -43,25 +60,32 @@ body {
     .navbar {
         margin-bottom:0px;
         border:0px;
+        background-color:@brand-header-bg;
         .navbar-header {
             button {
-                
+                background-color:@navbar-nav-hover;
+                border-color:@navbar-nav-hover;
             }
         }
         .navbar-collapse{
             @media (max-width: @screen-xs-max) {
-                
-            }
-            @media (min-width: @screen-xs-max) and (max-width: @screen-sm-min) {
+                background-color:@brand-header-bg;
+                border-color:@navbar-nav-hover;
                 .navbar-nav {
-                    width:10%;
                     > li {
-                        float:left;
-                        width:10%;
+                        a {
+                            color:@navbar-font-color;
+                            background-color:@brand-header-bg;
+                            &:hover,
+                            &:active {
+                                background-color:@navbar-nav-hover;
+                                color:@white;
+                            }
+                        }
                     }
                 }
             }
-            @media (min-width: @screen-sm-min) {
+            @media (min-width: @screen-xs-max) {
                 padding:20px 0;
                 background-color:@brand-header-bg;
                 .navbar-nav {
@@ -70,14 +94,15 @@ body {
                         float:none;
                         width:100%;
                         background-color:@brand-header-bg;
-                        height:30px;
                         > a {
+                            foat:none;
                             color:@navbar-font-color;
                             cursor:pointer;
                             background-color:@brand-header-bg;
                             text-align:center;
                             padding:5px;
-                            &:hover {
+                            &:hover,
+                            &:active {
                                 color:@white;
                                 background-color:@navbar-nav-hover;
                             }
@@ -89,9 +114,14 @@ body {
                     }
                     .dropdown-menu {
                         padding:0px;
+                        float:none;
+                        z-index:auto;
+                        position:relative;
                         >li > a {
+                            text-align:center;
                             color:@white;
                             background-color:@navbar-nav-hover;
+                            padding:5px;
                             &:hover,
                             &:focus {
                                 background-color:@navbar-nav-hover-dark;
@@ -113,7 +143,6 @@ body {
     .top-search {
         background-color:@search-bg;
         padding:15px;
-        margin-bottom:20px;
         #searchform {
             > div {
                 > label {
@@ -167,8 +196,69 @@ body {
         }
     }
     
-    .recent_news_scroll {
+    .content-header {
+        background-color:@content-header-bg;
+        max-height:150px;
         margin-bottom:20px;
+        img {
+            height:100%;
+        }
+        .content-header-title {
+            h1 {
+                color:@content-header-title;
+                font-weight:bold;
+                text-shadow:2px 2px 5px @gray-light;
+                @media (min-width:@screen-sm-min) {
+                    letter-spacing:15px;
+                    padding-top:10px;
+                    padding-bottom:10px;
+                }
+                @media (max-width:@screen-sm-min) {
+                    text-align:center;
+                    letter-spacing:5px;
+                    font-size:24px;
+                }
+            }
+        }
+        
+        .content-header-link {
+            @media (max-width:@screen-xs-max) {
+                padding-right:0px;
+            }
+            @media (min-width:@screen-xs-max) {
+                padding-right:30px;
+            }
+            a {
+                display:inline-block;
+                background-color:@content-header-title;
+                border:solid 2px @content-header-link-border;
+                color:@white;
+                &:hover,
+                &:active {
+                    text-decoration:none;
+                    background-color:@content-header-link-border;
+                    border:solid 2px @content-header-title;
+                }
+                @media (min-width:@screen-lg-min) {
+                    padding:10px 20px;
+                }
+                @media (max-width:@screen-lg-min) {
+                    margin:5px 0px;
+                    padding:5px 0px;
+                    width:80px;
+                    text-align:center;
+                    
+                }
+            }
+        }
+    }
+    
+    .main-content {
+        background-color:@main-content-bg;
+    }
+    
+    .recent_news_scroll {
+        margin:20px 0px;
     }
     
     .schools-images {
@@ -194,15 +284,15 @@ body {
         .youku {
             .youku-videos{
                 @media (max-width: @screen-xs-max) {
-                    padding-left:10px;
+                    
                 }
                 @media (min-width: @screen-xs-max) {
-                    padding-left:0px;
+                    
                 }
             }
             .youku-list {
                 div {
-                    padding:0;
+                    padding-left:0;
                     background-color:#303030;
                 }
             }
@@ -218,11 +308,15 @@ body {
     padding:0px;
     margin:0px;
     background-color:@brand-header-bg;
+    .sidebar-contact img {
+        width:100%
+    }
     #wpcf7-f9-o1 {
          .wpcf7-form {
              background:url("../img/contac_form-bg.png") no-repeat;
+             background-size:100%;
              background-color: @search-bg;
-             padding:70px 20px 30px 20px;
+             padding:70px 20px 30px 10px;
              .row {
                  margin:10px;
                  padding:0px;
@@ -237,12 +331,22 @@ body {
                              display:inline-block;
                              border:solid 1px @white;
                              border-radius:5px;
+                             @media (min-width: @screen-lg-min) {
+                                 width:150px;
+                             }
+                             @media (max-width: @screen-lg-min) and (min-width: @screen-md-min) {
+                                 width:120px;
+                             }
+                             @media (max-width: @screen-md-min) {
+                                 width:150px;
+                             }
                          }
                      }
                      .wpcf7-submit {
                          background:url("../img/form_submit.png") no-repeat center;
-                         width:158px;
-                         height:60px;
+                         background-size:100%;
+                         width:132px;
+                         height:50px;
                          text-indent:-10000px;
                          padding:0px;
                          margin-top:10px;
@@ -276,6 +380,18 @@ body {
     margin-top:20px;
     > div {
         margin-bottom:10px;
+        img {
+            width:100%;
+        }
+    }
+}
+
+.ad-scroll {
+    #ivrss_holder2 {
+        height:100%;
+        img {
+            width:100%;
+        }
     }
 }
 
@@ -324,13 +440,16 @@ body {
     }
     .schools-contact-link {
         margin:0px;
-        p {
-            margin:0px;padding:0px;
-            a{
-                color:#303030;
-                font-size:12px;
-                &:hover {
-                    text-decoration:none;
+        > div {
+            padding:0px;
+            p {
+                margin:0px;padding:0px;
+                a{
+                    color:#303030;
+                    font-size:12px;
+                    &:hover {
+                        text-decoration:none;
+                    }
                 }
             }
         }

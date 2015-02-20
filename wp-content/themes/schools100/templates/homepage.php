@@ -11,12 +11,12 @@ Version: 1.0
 
 <?php get_template_part('template-part', 'topnav'); ?>
 
-<div class="hidden-xs hidden-sm row sidebar-left">
+<div class="hidden-xs row sidebar-left">
 <?php get_sidebar( 'left' ); ?>
 </div>
 
 </div>
-<div class="col-md-9">
+<div class="col-sm-9 col-xs-12">
 <!-- start content container -->
 <div class="row dmbs-content">
 
@@ -27,7 +27,7 @@ Version: 1.0
 
         <div class="row top-search"><?php echo get_search_form(); ?></div>
 		<div class="recent_news_scroll">
-			<?php echo do_shortcode('[ivrss-gallery type="GROUP1" display="1" height="200" random="No" speed="" waitseconds=""]'); ?>
+			<?php echo do_shortcode('[metaslider id=54]');?>
 		</div>
 		<div class="schools-images">
 			<div class="row school-thumbs">

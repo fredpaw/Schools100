@@ -1,13 +1,13 @@
 <div class="dmbs-footer-menu">
 	<div class="row more-info">
-		<div class="col-md-4 col-sm-12">
-			<a href=""><img src="wp-content/themes/schools100/img/d_11.png" /></a>
+		<div class="col-sm-4 col-xs-12">
+			<a href=""><img src="<?php bloginfo('template_url'); ?>/img/d_11.png" /></a>
 		</div>
-		<div class="col-md-4 col-sm-12">
-			<a href=""><img src="wp-content/themes/schools100/img/d_12.png" /></a>
+		<div class="col-sm-4 col-xs-12">
+			<a href=""><img src="<?php bloginfo('template_url'); ?>/img/d_12.png" /></a>
 		</div>
-		<div class="col-md-4 col-sm-12">
-			<a href=""><img src="wp-content/themes/schools100/img/d_13.png" /></a>
+		<div class="col-sm-4 col-xs-12">
+			<a href=""><img src="<?php bloginfo('template_url'); ?>/img/d_13.png" /></a>
 		</div>
 	</div>
 	<div class="ad-scroll">
@@ -231,7 +231,7 @@
 					<p><a href="">ASES测试</a></p>
 					<br>
 					<br>
-					<p><img src="wp-content/themes/schools100/img/website_qr_bottom.png" /></p>
+					<p><img src="<?php bloginfo('template_url'); ?>/img/website_qr_bottom.png" /></p>
 				</div>
 				<div class="col-sm-6 col-xs-6">
 					<h4>澳洲文化</h4>
@@ -240,7 +240,7 @@
 					<h4>家长园地</h4>
 					<p><a href="http://www.aoloo.org/forum.php?mod=forumdisplay&fid=127" target="_blank">家长园地</a></p>
 					<br>
-					<p style="margin-top:10px;"><img src="wp-content/themes/schools100/img/weixin_qr_bottom.png" /></p>
+					<p style="margin-top:10px;"><img src="<?php bloginfo('template_url'); ?>/img/weixin_qr_bottom.png" /></p>
 				</div>
 			</div>
 		</div>
