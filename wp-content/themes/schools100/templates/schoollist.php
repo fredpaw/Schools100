@@ -64,29 +64,52 @@ Version: 1.0
 				<img src=""></img>
 			</div>
 		</div>
-		<div class="school-category-list row">
-			<div class="school-category-title">
-			</div>
-			<div class="school-category-sort">
-			</div>
-			<div class="school-category-list row">
-				<div class="school-category-thumb col-sm-2">
+		
+		<div class="school-category-block main-content row">
+			<div class="container-fluid school-category-header">
+				<div class="school-category-title">
+				<h1><?php $category = get_category_by_slug( $_GET['cat'] ); echo $category->name; ?><h1>
 				</div>
-				<div class="school-category-detail col-sm-10">
-					<div class="school-title">
-					</div>
-					<div class="school-fee">
-					</div>
-					<div class="school-requirement">
-					</div>
-					<div class="school-population">
-					</div>
-					<div class="school-establish-time">
-					</div>
-					<div class="school-type">
-					</div>
+				<div class="school-category-sort">
+				<p><a class="pull-right school-sort" href="">学费排序 <span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span></a><a class="pull-right school-sort" href="">名字排序 <span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span></a></p>
 				</div>
 			</div>
+			<?php 
+				$args = array(
+					'category_name' => $_GET['cat'] ? $_GET['cat'] : 'missionary-school',
+					'posts_per_page' => 5,
+					'order' => 'DESC',
+					'orderby' => $_GET['sort'] ? $_GET['sort'] : 'date',
+				);
+				
+				$the_query = new WP_Query( $args );
+			?>
+			<?php if ( $the_query->have_posts() ) { ?>
+				<?php while ( $the_query->have_posts() ) : $the_query->the_post();?>
+				<div class="school-category-list row">
+					<div class="container-fluid">
+						<div class="school-category-thumb col-md-3 col-sm-4 col-xs-12">
+						<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
+						</div>
+						<div class="col-md-9 col-sm-8 col-xs-12">
+						<div class="school-category-detail">
+							<div class="school-title">
+								<a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?><span class="pull-right"><img src="<?php bloginfo('template_url'); ?>/img/double_arrow.png" /></span></h3></a>
+							</div>
+							<div class="school-meta">
+							<?php the_meta(); ?>
+							</div>
+							<div class="school-type">
+								<span class="post-meta-key">学校类型：</span><?php the_category(); ?>
+							</div>
+						</div>
+						</div>
+					</div>
+				</div>
+				<?php endwhile; ?>
+			<?php } else { ?>
+				<?php get_404_template(); ?>
+			<?php }	?>
 		</div>
 		
 		<?php get_template_part('template-part', 'footernav'); ?>

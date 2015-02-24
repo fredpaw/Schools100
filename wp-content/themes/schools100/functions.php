@@ -172,4 +172,20 @@ function wpse_theme_uri_shortcode( $attrs = array (), $content = '' )
 }
 
 add_filter('widget_text', 'do_shortcode');
+
+////////////////////////////////////////////////////////////////////
+// Alter excerpt length
+////////////////////////////////////////////////////////////////////
+function new_excerpt_length($length) {
+return 200;
+}
+add_filter('excerpt_length', 'new_excerpt_length');
+
+////////////////////////////////////////////////////////////////////
+// Changing excerpt more
+////////////////////////////////////////////////////////////////////
+function new_excerpt_more($more) {
+return ' ...';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
 ?>

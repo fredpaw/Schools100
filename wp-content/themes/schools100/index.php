@@ -45,7 +45,7 @@
 
                  $total_results = $wp_query->found_posts;
 
-                 echo "<h2 class='page-header'>" . sprintf( __('%s Search Results for "%s"','devdmbootstrap3'),  $total_results, get_search_query() ) . "</h2>";
+                 echo "<h3 class='page-header'>" . sprintf( __('关于“%s”的%s个搜索结果','devdmbootstrap3'), get_search_query(), $total_results ) . "</h3>";
 
                  if ($total_results == 0) :
                      get_search_form(true);
@@ -73,6 +73,7 @@
                     <?php
                     // list of posts
                     else : ?>
+					  <div class="search-list container-fluid">
                        <div <?php post_class(); ?>>
 
                             <h2 class="page-header">
@@ -80,12 +81,10 @@
                             </h2>
 
                             <?php if ( has_post_thumbnail() ) : ?>
-                               <?php the_post_thumbnail(); ?>
-                                <div class="clear"></div>
+                               <a href="<?php echo get_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
                             <?php endif; ?>
-                            <?php the_content(); ?>
+                            <?php the_excerpt(); ?>
                             <?php wp_link_pages(); ?>
-                            <?php get_template_part('template-part', 'postmeta'); ?>
                             <?php  if ( comments_open() ) : ?>
                                    <div class="clear"></div>
                                   <p class="text-right">
@@ -93,6 +92,7 @@
                                   </p>
                             <?php endif; ?>
                        </div>
+					  </div>
 
                      <?php  endif; ?>
 
