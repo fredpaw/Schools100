@@ -9,6 +9,11 @@
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/kefu.css">
 	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/kefu.js"></script>
+	<link rel="icon" href="<?php bloginfo('template_url');?>/img/favicon.ico" type="image/x-icon"/>
     <?php wp_head(); ?>
+	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/all.js"></script>
+	<script type="text/javascript">
+	
+</script>
 </head>
 <body <?php body_class(); ?>>

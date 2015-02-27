@@ -38,7 +38,7 @@
 		</div>
 		
 		<div class="container-fluid main-content">
-			<div class="404">
+			<div class="content-404">
 			<h1><?php _e('你所访问的页面不存在！','devdmbootstrap3'); ?></h1>
 			</div>
         </div>

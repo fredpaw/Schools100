@@ -177,7 +177,7 @@ add_filter('widget_text', 'do_shortcode');
 // Alter excerpt length
 ////////////////////////////////////////////////////////////////////
 function new_excerpt_length($length) {
-return 200;
+return 250;
 }
 add_filter('excerpt_length', 'new_excerpt_length');
 

@@ -36,7 +36,7 @@
 				</div>
 			</div>
 		</div>
-		
+		<div class="container-fluid main-content">
 		<?php // theloop
         if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
@@ -51,7 +51,7 @@
             <?php get_404_template(); ?>
 
         <?php endif; ?>
-		
+		</div>
 		<?php get_template_part('template-part', 'footernav'); ?>
     </div>
 
