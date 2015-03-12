@@ -77,7 +77,7 @@ Version: 1.0
 						<div id="school-brief-<?php echo $i; ?>" class="school-intro-block">
 							<div class="school-intro">
 								<div class="school-intro-title"><a href="<?php the_permalink(); ?>"><h3 class="text-center"><?php the_title();?></h3></a></div>
-								<div class="school-intro-content"><?php the_content()?></div>
+								<div class="school-intro-content"><?php the_excerpt(); ?></div>
 							</div>
 						</div>
 					<?php
@@ -97,10 +97,12 @@ Version: 1.0
 				</div>
 				<div class="school-category-sort">
 				<div class="school-sort pull-right">
-				<p class="sort-order" id="sort-order" onclick="">学费排序 <span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span><span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></p>
+				<p class="sort-order" id="fee-order-down">学费排序 <span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span></p>
+				<p class="sort-order" id="fee-order-up">学费排序 <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></p>
 				</div>
 				<div class="school-sort pull-right">
-				<p class="sort-order">名字排序 <span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span><span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></p>
+				<p class="sort-order" id="name-order-down">名字排序 <span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span></p>
+				<p class="sort-order" id="name-order-up">名字排序 <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></p>
 				</div>
 				</div>
 			</div>
@@ -186,5 +188,4 @@ Version: 1.0
 </div>
 </div>
 <!-- end content container -->
-<script type="text/javascript">
 <?php get_footer(); ?>

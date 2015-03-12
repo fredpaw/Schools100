@@ -2,7 +2,7 @@
 <html <?php language_attributes(); ?>>
 <head>
     <meta http-equiv="content-type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
-    <meta name="description" content="<?php echo esc_attr(get_bloginfo('description')); ?>" />
+    
     <title><?php wp_title('&laquo;', true, 'right'); ?></title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,9 +11,5 @@
 	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/kefu.js"></script>
 	<link rel="icon" href="<?php bloginfo('template_url');?>/img/favicon.ico" type="image/x-icon"/>
     <?php wp_head(); ?>
-	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/all.js"></script>
-	<script type="text/javascript">
-	
-</script>
 </head>
 <body <?php body_class(); ?>>

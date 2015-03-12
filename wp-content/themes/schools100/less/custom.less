@@ -299,9 +299,14 @@ body {
                             height:40px;
                             width:100%;
                             line-height:40px;
+                            &,
+                            &:visited,
                             &:hover,
                             &:active {
                                 text-decoration:none;
+                            }
+                            &:hover {
+                                color:@post-meta-key-color;
                             }
                         }
                     }
@@ -321,6 +326,8 @@ body {
                     margin:30px 0px;
                     a {
                         color:@white;
+                        &,
+                        &:visited,
                         &:hover,
                         &:active {
                             text-decoration:none;
@@ -335,13 +342,101 @@ body {
                     color:@gray;
                 }
             }
-            
-            .school-intro-block{
-                display:none;
+        }
+        .school-distribution-container{
+            .school-distribution {
+                ul {
+                    list-style:none;
+                    padding:0px;
+                    li {
+                        padding-top:5px;
+                        a {
+                            font-size:24px;
+                            line-height:50px;
+                            height:50px;
+                            &,
+                            &:visited,
+                            &:hover,
+                            &:active {
+                                text-decoration:none;
+                            }
+                            &:hover {
+                                span {
+                                    &:first-child {
+                                        color:@distribution-en-color;
+                                    }
+                                    &:last-child {
+                                        background:url('../img/en-active.png') no-repeat center;
+                                        color:@white;
+                                    }
+                                }
+                            }
+                            span{
+                                display:inline-block;
+                                &:first-child{
+                                    width:160px;
+                                    padding-right:10px;
+                                    color:@distribution-ch-color;
+                                }
+                                &:last-child{
+                                    width:80px;
+                                    color:@distribution-en-color;
+                                    background:url('../img/en-bg.png') no-repeat center;
+                                }
+                            }
+                            @media (min-width:@screen-md-min) and (max-width:@screen-lg-min) {
+                                font-size:20px;
+                                height:40px;
+                                line-height:40px;
+                                span:first-child {
+                                    width:130px;
+                                }
+                                span:last-child {
+                                    width:60px;
+                                }
+                            }
+                            @media (min-width:@screen-sm-min) and (max-width:@screen-md-min) {
+                                font-size:13px;
+                                height:25px;
+                                line-height:25px;
+                                span:first-child {
+                                    width:90px;
+                                }
+                                span:last-child {
+                                    width:40px;
+                                }
+                            }
+                            @media (max-width:@screen-xs-max) {
+                                font-size:14px;
+                                height:22px;
+                                line-height:22px;
+                                span:first-child{
+                                    width:120px;
+                                }
+                                span:last-child {
+                                    width:50px;
+                                }
+                            }
+                        }
+                    }
+                    .active {
+                        span{
+                            &:first-child {
+                                color:@distribution-en-color;
+                            }
+                            &:last-child {
+                                background:url('../img/en-active.png') no-repeat center;
+                                color:@white;
+                            }
+                        }
+                    }
+                }
             }
-            
-            #school-brief-5 {
-                display:initial;
+            .school-map {
+                img {
+                    width:100%;
+                    height:100%;
+                }
             }
         }
     }
@@ -473,6 +568,52 @@ body {
             .next, .prev {
                 width:70px;
             }
+        }
+    }
+    
+    .info-content {
+        background:@white;
+        h1 {
+            color:@content-header-title;
+            font-weight:bold;
+        }
+        h3 {
+            font-weight:bold;
+        }
+        p {
+            font-size:16px;
+            line-height:28px;
+        }
+        ul {
+            li {
+                font-size:16px;
+                line-height:28px;
+            }
+        }
+        
+        .info-number {
+            color:white;
+            background-color:@content-header-title;
+            padding:5px;
+        }
+    }
+    
+    .info-concept {
+        background:@concept-bg;
+        h1 {
+            b{
+            background:url('../img/title-bg.png') no-repeat center;
+            }
+        }
+        .ic-1 {
+            
+        }
+        .ic-2 {
+            
+        }
+        p {
+            font-size:16px;
+            line-height:28px;
         }
     }
     

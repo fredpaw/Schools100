@@ -1,0 +1,6 @@
+Disallow: /wp-content/
+Allow: /wp-content/uploads/
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Sitemap: http://www.schools100.com/sitemap.xml
+Sitemap: http://www.schools100.com/sitemap_baidu.xml

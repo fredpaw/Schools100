@@ -10,8 +10,7 @@
 
 </div>
 <!-- end main container -->
-
 <?php wp_footer(); ?>
 </body>
-<script type='text/javascript' src='http://tb.53kf.com/kf.php?arg=10061337&style=1'></script>
+
 </html>

@@ -1,5 +1,4 @@
 <?php
-
 ////////////////////////////////////////////////////////////////////
 // Theme Information
 ////////////////////////////////////////////////////////////////////
@@ -188,4 +187,65 @@ function new_excerpt_more($more) {
 return ' ...';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
+
+////////////////////////////////////////////////////////////////////
+// Add sorting.js to header
+////////////////////////////////////////////////////////////////////
+add_action( 'wp_enqueue_scripts', 'add_sorting' );
+function add_sorting() {
+    wp_enqueue_script(
+        'sorting', // name your script so that you can attach other scripts and de-register, etc.
+        get_stylesheet_directory_uri() . '/js/sorting.js', // this is the location of your script file
+        array('jquery') // this array lists the scripts upon which your script depends
+    );
+}
+
+////////////////////////////////////////////////////////////////////
+// Add kefu.js to header
+////////////////////////////////////////////////////////////////////
+add_action( 'wp_enqueue_scripts', 'add_kefu' );
+function add_kefu() {
+    wp_enqueue_script(
+        'kefu', // name your script so that you can attach other scripts and de-register, etc.
+        'http://tb.53kf.com/kf.php?arg=10061337&style=1', // this is the location of your script file
+        array('jquery') // this array lists the scripts upon which your script depends
+    );
+}
+
+////////////////////////////////////////////////////////////////////
+// Add dist.js to header
+////////////////////////////////////////////////////////////////////
+add_action( 'wp_enqueue_scripts', 'add_dist' );
+function add_dist() {
+    wp_enqueue_script(
+        'distribution', // name your script so that you can attach other scripts and de-register, etc.
+        get_stylesheet_directory_uri() . '/js/dist.js', // this is the location of your script file
+        array('jquery') // this array lists the scripts upon which your script depends
+    );
+}
+
+////////////////////////////////////////////////////////////////////
+// Add dist.js to header
+////////////////////////////////////////////////////////////////////
+add_action( 'wp_enqueue_scripts','remove_dist');
+function remove_dist() {
+	if(is_page('名校推荐')) {
+		wp_dequeue_script('distribution');
+	}
+}
+add_action( 'wp_enqueue_scripts', 'add_recomm' );
+function add_recomm() {
+	if (is_page('名校推荐')) {
+		wp_enqueue_script(
+			'recommended', // name your script so that you can attach other scripts and de-register, etc.
+			get_stylesheet_directory_uri() . '/js/recomm.js', // this is the location of your script file
+			array('jquery') // this array lists the scripts upon which your script depends
+		);
+	}
+}
+
+////////////////////////////////////////////////////////////////////
+// Add instruction page to admin
+////////////////////////////////////////////////////////////////////
+	require_once('instruction.php');
 ?>
