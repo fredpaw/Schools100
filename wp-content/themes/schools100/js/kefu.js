@@ -13,14 +13,6 @@ var type;
 var wpadomain;
 var eid;
 
-var Browser = {
-	ie:/msie/.test(window.navigator.userAgent.toLowerCase()),
-	moz:/gecko/.test(window.navigator.userAgent.toLowerCase()),
-	opera:/opera/.test(window.navigator.userAgent.toLowerCase()),
-	safari:/safari/.test(window.navigator.userAgent.toLowerCase())
-};
-
-
 if(kfguin)
 {
 	
@@ -649,3 +641,22 @@ function wpa_count()
     img.style.display = "none";
     body.appendChild(img);
 }
+
+jQuery(document).ready(function($) {
+	var sUserAgent = navigator.userAgent.toLowerCase();
+	var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+	var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+	var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+	var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+	var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+	var bIsAndroid = sUserAgent.match(/android/i) == "android";
+	var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+	var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+	if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+		$(".qq_pc").addClass("hidden");
+		$(".qq_mobile").removeClass("hidden");
+	} else {
+		$(".qq_pc").removeClass("hidden");
+		$(".qq_mobile").addClass("hidden");
+	}
+});

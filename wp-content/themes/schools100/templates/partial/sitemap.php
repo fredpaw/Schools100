@@ -46,3 +46,18 @@ foreach ($cats as $cat) {
 }
 ?>
 </ul>
+<?php
+  foreach( get_post_types( array('public' => true) ) as $post_type ) {
+  if ( in_array( $post_type, array('post','page','attachment') ) )
+    continue;
+  $pt = get_post_type_object( $post_type );
+  echo '<h2>'.$pt->labels->name.'</h2>';
+  echo '<ul>';
+  query_posts('post_type='.$post_type.'&posts_per_page=-1');
+  while( have_posts() ) {
+    the_post();
+    echo '<li><a href="'.get_permalink().'">'.get_the_title().'</a></li>';
+  }
+  echo '</ul>';
+}
+?>

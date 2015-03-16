@@ -38,23 +38,6 @@
 		</div>
 		
 		<div class="container-fluid main-content">
-		<?php
-
-            //if this was a search we display a page header with the results count. If there were no results we display the search form.
-            if (is_search()) :
-
-                 $total_results = $wp_query->found_posts;
-
-                 echo "<h3 class='page-header'>" . sprintf( __('关于“%s”的%s个搜索结果','devdmbootstrap3'), get_search_query(), $total_results ) . "</h3>";
-
-                 if ($total_results == 0) :
-                     get_search_form(true);
-                 endif;
-
-            endif;
-
-        ?>
-
             <?php // theloop
                 if ( have_posts() ) : while ( have_posts() ) : the_post();
 
@@ -64,36 +47,12 @@
                         <div <?php post_class(); ?>>
 
                             <h2 class="page-header"><?php the_title() ;?></h2>
-
+							<p class="text-right">发布时间：<?php the_date(); ?></p>
                             <?php the_content(); ?>
                             <?php wp_link_pages(); ?>
                             <?php comments_template(); ?>
 
                         </div>
-                    <?php
-                    // list of posts
-                    else : ?>
-					  <div class="search-list container-fluid">
-                       <div <?php post_class(); ?>>
-
-                            <h2 class="page-header">
-                                <a href="<?php the_permalink(); ?>" target="_blank" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'devdmbootstrap3' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
-                            </h2>
-
-                            <?php if ( has_post_thumbnail() ) : ?>
-                               <a href="<?php echo get_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
-                            <?php endif; ?>
-                            <?php the_excerpt(); ?>
-                            <?php wp_link_pages(); ?>
-                            <?php  if ( comments_open() ) : ?>
-                                   <div class="clear"></div>
-                                  <p class="text-right">
-                                      <a class="btn btn-success" href="<?php the_permalink(); ?>#comments"><?php comments_number(__('Leave a Comment','devdmbootstrap3'), __('One Comment','devdmbootstrap3'), '%' . __(' Comments','devdmbootstrap3') );?> <span class="glyphicon glyphicon-comment"></span></a>
-                                  </p>
-                            <?php endif; ?>
-                       </div>
-					  </div>
-
                      <?php  endif; ?>
 
                 <?php endwhile; ?>

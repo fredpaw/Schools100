@@ -1,13 +1,13 @@
 <div class="dmbs-footer-menu">
 	<div class="row more-info">
 		<div class="col-sm-4 col-xs-12">
-			<a href=""><img src="<?php bloginfo('template_url'); ?>/img/d_11.png" /></a>
+			<a href="<?php bloginfo('url'); ?>/self-experience/"><img src="<?php bloginfo('template_url'); ?>/img/d_11.png" /></a>
 		</div>
 		<div class="col-sm-4 col-xs-12">
-			<a href=""><img src="<?php bloginfo('template_url'); ?>/img/d_12.png" /></a>
+			<a href="<?php bloginfo('url'); ?>/education-concept/"><img src="<?php bloginfo('template_url'); ?>/img/d_12.png" /></a>
 		</div>
 		<div class="col-sm-4 col-xs-12">
-			<a href=""><img src="<?php bloginfo('template_url'); ?>/img/d_13.png" /></a>
+			<a href="<?php bloginfo('url'); ?>/contact-us/"><img src="<?php bloginfo('template_url'); ?>/img/d_13.png" /></a>
 		</div>
 	</div>
 	<div class="ad-scroll">

@@ -7,8 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/kefu.css">
-	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/kefu.js"></script>
 	<link rel="icon" href="<?php bloginfo('template_url');?>/img/favicon.ico" type="image/x-icon"/>
     <?php wp_head(); ?>
 </head>

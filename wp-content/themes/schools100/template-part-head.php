@@ -15,34 +15,21 @@
         <div class="tp"></div>
         <div class="cn">
             <ul>
-                <li class="top">
-                    <h3 class="titZx">QQ咨询</h3>
-                </li>
-                <li><span class="icoZx">悉尼办公室</span> </li>
-                <li><span class="icoTl">(02) 9267 7239</span> </li>
-                <li>
-                    <a target="blank" href="tencent://message/?uin=1955462185 &amp;Site=&amp;Menu=yes">
-                        <img border="0" src="http://wpa.qq.com/pa?p=1:1955462185:4" alt="蔡老师（Bianca）">
-                    </a>蔡老师(Bianca)
-                </li>
-                <li><span class="icoZx">墨尔本办公室</span> </li>
-                <li><span class="icoTl">(03) 9614 6026</span> </li>
-                <li>
-                    <a target="blank" href="tencent://message/?uin=2301396725&amp;Site=&amp;Menu=yes">
-                        <img border="0" src="http://wpa.qq.com/pa?p=1:2301396725:4" alt="赵老师（Katie）">
-                    </a>
-                    赵老师(Katie)
-                </li>
-                <li><span class="icoZx">北京办公室</span> </li>
-                <li><span class="icoTl">010-59003028</span> </li>
-                <li> <a target="blank" href="tencent://message/?uin=2073876220&amp;Site=&amp;Menu=yes">
-                        <img border="0" src="http://wpa.qq.com/pa?p=1:2073876220:4" alt="许老师(Daisy)"></a>
-                    许老师(Daisy)
-                </li>
-                <li> <a target="blank" href="tencent://message/?uin=2106914517&amp;Site=&amp;Menu=yes">
-                        <img border="0" src="http://wpa.qq.com/pa?p=1:2106914517:4" alt="百分网老师"></a>
-                    百分网老师
-                </li>
+                <li class="top"><h3 class="titZx">QQ咨询</h3></li>
+                <li><span class="icoZx">悉尼办公室</span></li>
+                <li><a href="tel:0292677239" class="icoTl">(02) 9267 7239</a></li>
+                <li class="qq_pc"><a target="blank" href="tencent://message/?uin=1955462185&amp;Site=&amp;Menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=1:1955462185:4" alt="蔡老师（Bianca）">蔡老师(Bianca)</a></li>
+                <li class="qq_mobile hidden"><a target="blank" href="tencent://message/?uin=1955462185&amp;Site=&amp;Menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=1:1955462185:4" alt="蔡老师（Bianca）">蔡老师(Bianca)</a></li>
+                <li><span class="icoZx">墨尔本办公室</span></li>
+                <li><a href="tel:0396146026" class="icoTl">(03) 9614 6026</a></li>
+                <li class="qq_pc"><a target="blank" href="tencent://message/?uin=2301396725&amp;Site=&amp;Menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=1:2301396725:4" alt="赵老师（Katie）">	赵老师(Katie)</a></li>
+                <li class="qq_mobile hidden"><a target="blank" href="tencent://message/?uin=2301396725&amp;Site=&amp;Menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=1:2301396725:4" alt="赵老师（Katie）">	赵老师(Katie)</a></li>
+                <li><span class="icoZx">北京办公室</span></li>
+                <li><a href="tel:01059003028" class="icoTl">010-59003028</a></li>
+                <li class="qq_pc"><a target="blank" href="tencent://message/?uin=2073876220&amp;Site=&amp;Menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=1:2073876220:4" alt="许老师(Daisy)">许老师(Daisy)</a></li>
+                <li class="qq_mobile hidden"><a target="blank" href="tencent://message/?uin=2073876220&amp;Site=&amp;Menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=1:2073876220:4" alt="许老师(Daisy)">许老师(Daisy)</a></li>
+                <li class="qq_pc"><a target="blank" href="tencent://message/?uin=2106914517&amp;Site=&amp;Menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=1:2106914517:4" alt="百分网老师">百分网老师</a></li>
+                <li class="qq_mobile hidden"><a target="blank" href="tencent://message/?uin=2106914517&amp;Site=&amp;Menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=1:2106914517:4" alt="百分网老师">百分网老师</a></li>
             </ul>
         </div>
     </div>

@@ -32,38 +32,38 @@ Version: 1.0
 		<div class="schools-images">
 			<div class="row school-thumbs">
 				<div class="col-xs-6 col-sm-3">
-					<a href="<?php bloginfo('url');?>/schools_type/?cat=missionary-school"><img src="<?php bloginfo('template_url'); ?>/img/c_01_orig.png"/></a>
+					<a href="<?php bloginfo('url');?>/schools_type/missionary-school/"><img src="<?php bloginfo('template_url'); ?>/img/c_01_orig.png"/></a>
 				</div>
 				<div class="col-xs-6 col-sm-3">
-					<a href="<?php bloginfo('url');?>/schools_type/?cat=public-school"><img src="<?php bloginfo('template_url'); ?>/img/c_02_orig.png"/></a>
+					<a href="<?php bloginfo('url');?>/schools_type/public-school/"><img src="<?php bloginfo('template_url'); ?>/img/c_02_orig.png"/></a>
 				</div>
 				<div class="col-xs-6 col-sm-3">
-					<a href="<?php bloginfo('url');?>/schools_type/?cat=private-school"><img src="<?php bloginfo('template_url'); ?>/img/c_03_orig.png"/></a>
+					<a href="<?php bloginfo('url');?>/schools_type/private-school/"><img src="<?php bloginfo('template_url'); ?>/img/c_03_orig.png"/></a>
 				</div>
 				<div class="col-xs-6 col-sm-3">
-					<a href="<?php bloginfo('url');?>/schools_type/?cat=international-school"><img src="<?php bloginfo('template_url'); ?>/img/c_04_orig.png"/></a>
+					<a href="<?php bloginfo('url');?>/schools_type/international-school/"><img src="<?php bloginfo('template_url'); ?>/img/c_04_orig.png"/></a>
 				</div>
 			</div>
 			<div class="row school-thumbs">
 				<div class="col-xs-12 col-sm-6">
-					<a href="<?php bloginfo('url');?>/schools_type/?cat=recommended-school"><img src="<?php bloginfo('template_url'); ?>/img/c_06.png"/></a>
+					<a href="<?php bloginfo('url');?>/schools_type/recommended-school/"><img src="<?php bloginfo('template_url'); ?>/img/c_06.png"/></a>
 				</div>
 				<div class="col-xs-6 col-sm-3">
-					<a href="<?php bloginfo('url');?>/schools_type/?cat=elite-school"><img src="<?php bloginfo('template_url'); ?>/img/c_05_orig.png"/></a>
+					<a href="<?php bloginfo('url');?>/schools_type/elite-school/"><img src="<?php bloginfo('template_url'); ?>/img/c_05_orig.png"/></a>
 				</div>
 				<div class="col-xs-6 col-sm-3">
-					<a href="<?php bloginfo('url');?>/schools_type/?cat=specialty-school"><img src="<?php bloginfo('template_url'); ?>/img/c_07_orig.png"/></a>
+					<a href="<?php bloginfo('url');?>/schools_type/specialty-school/"><img src="<?php bloginfo('template_url'); ?>/img/c_07_orig.png"/></a>
 				</div>
 			</div>
 			<div class="row school-thumbs">
 				<div class="col-xs-6 col-sm-3">
-					<a href="<?php bloginfo('url');?>/schools_type/?cat=girl-school"><img src="<?php bloginfo('template_url'); ?>/img/c_08_orig.png"/></a>
+					<a href="<?php bloginfo('url');?>/schools_type/girl-school/"><img src="<?php bloginfo('template_url'); ?>/img/c_08_orig.png"/></a>
 				</div>
 				<div class="col-xs-6 col-sm-3">
-					<a href="<?php bloginfo('url');?>/schools_type/?cat=boy-school"><img src="<?php bloginfo('template_url'); ?>/img/c_09_orig.png"/></a>
+					<a href="<?php bloginfo('url');?>/schools_type/boy-school/"><img src="<?php bloginfo('template_url'); ?>/img/c_09_orig.png"/></a>
 				</div>
 				<div class="col-xs-6 col-sm-3">
-					<a href="<?php bloginfo('url');?>/schools_type/?cat=mixed-school"><img src="<?php bloginfo('template_url'); ?>/img/c_10_orig.png"/></a>
+					<a href="<?php bloginfo('url');?>/schools_type/mixed-school/"><img src="<?php bloginfo('template_url'); ?>/img/c_10_orig.png"/></a>
 				</div>
 				<div class="col-xs-6 col-sm-3">
 					<a href="<?php bloginfo('url');?>/university-foundation/"><img src="<?php bloginfo('template_url'); ?>/img/c_11_orig.png"/></a>
@@ -71,13 +71,13 @@ Version: 1.0
 			</div>
 			<div class="row school-thumbs">
 				<div class="col-xs-6 col-sm-3">
-					<a href="<?php bloginfo('url');?>/schools_type/?cat=ib-school"><img src="<?php bloginfo('template_url'); ?>/img/c_12_orig.png"/></a>
+					<a href="<?php bloginfo('url');?>/schools_type/ib-school/"><img src="<?php bloginfo('template_url'); ?>/img/c_12_orig.png"/></a>
 				</div>
 				<div class="col-xs-6 col-sm-3">
-					<a href="<?php bloginfo('url');?>/schools_type/?cat=boarding-school"><img src="<?php bloginfo('template_url'); ?>/img/c_13_orig.png"/></a>
+					<a href="<?php bloginfo('url');?>/schools_type/boarding-school/"><img src="<?php bloginfo('template_url'); ?>/img/c_13_orig.png"/></a>
 				</div>
 				<div class="col-xs-12 col-sm-6">
-					<a href="<?php bloginfo('url');?>/area-list/?cat=nsw"><img src="<?php bloginfo('template_url'); ?>/img/c_14.png"/></a>
+					<a href="<?php bloginfo('url');?>/area-list/new-south-wales-schools/"><img src="<?php bloginfo('template_url'); ?>/img/c_14.png"/></a>
 				</div>
 			</div>
 		</div>

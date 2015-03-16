@@ -201,7 +201,7 @@ function add_sorting() {
 }
 
 ////////////////////////////////////////////////////////////////////
-// Add kefu.js to header
+// Add 53kefu.js to header
 ////////////////////////////////////////////////////////////////////
 add_action( 'wp_enqueue_scripts', 'add_kefu' );
 function add_kefu() {
@@ -210,6 +210,23 @@ function add_kefu() {
         'http://tb.53kf.com/kf.php?arg=10061337&style=1', // this is the location of your script file
         array('jquery') // this array lists the scripts upon which your script depends
     );
+}
+
+////////////////////////////////////////////////////////////////////
+// Add qq kefu.js to header
+////////////////////////////////////////////////////////////////////
+add_action( 'wp_enqueue_scripts', 'add_qq' );
+function add_qq() {
+    wp_enqueue_script(
+        'qqjs', // name your script so that you can attach other scripts and de-register, etc.
+        get_stylesheet_directory_uri() . '/js/kefu.js', // this is the location of your script file
+        array('jquery') // this array lists the scripts upon which your script depends
+    );
+	
+	wp_enqueue_style(
+		'qqcss',
+		get_stylesheet_directory_uri() . '/css/kefu.css'
+	);
 }
 
 ////////////////////////////////////////////////////////////////////
