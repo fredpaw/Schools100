@@ -86,55 +86,7 @@ Version: 1.0
 				<iframe id="sina_widget_3933331142" style="width:100%; height:300px;" frameborder="0" scrolling="no" src="http://v.t.sina.com.cn/widget/widget_blog.php?uid=3933331142&height=300&skin=wd_01&showpic=1"></iframe>
 			</div>
 			<div class="col-md-8 youku">
-				<div class="row">
-					<div class="youku-videos col-sm-8 col-xs-12" id="youku-homepage" name="youku-videos">
-						<iframe name="youku-videos" height=300 width=510 src="http://player.youku.com/embed/XODkwNDgxNzQ0" rel="nofollow" frameborder=0 allowfullscreen></iframe>
-					</div>
-					<div class="youku-list col-sm-4 col-xs-12">
-						<div class="row">
-							<div class="col-xs-3 col-sm-12">
-								<div class="row">
-									<div class="col-xs-12 col-sm-2">
-										<a href="http://player.youku.com/embed/XODkwNDgxNzQ0" target="youku-videos" rel="nofollow">1</a>
-									</div>
-									<div class="hidden-xs col-sm-10">
-										<a href="http://player.youku.com/embed/XODkwNDgxNzQ0" target="youku-videos" rel="nofollow">视频1</a>
-									</div>
-								</div>
-							</div>
-							<div class="col-xs-3 col-sm-12">
-								<div class="row">
-									<div class="col-xs-12 col-sm-2">
-										<a href="http://player.youku.com/embed/XODkwNDcwNTg4" target="youku-videos" rel="nofollow">2</a>
-									</div>
-									<div class="hidden-xs col-sm-10">
-										<a href="http://player.youku.com/embed/XODkwNDcwNTg4" target="youku-videos" rel="nofollow">视频2</a>
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-xs-3 col-sm-12">
-									<div class="col-xs-12 col-sm-2">
-										<a href="http://player.youku.com/embed/XODkwNDY4Mjg0" target="youku-videos" rel="nofollow">3</a>
-									</div>
-									<div class="hidden-xs col-sm-10">
-										<a href="http://player.youku.com/embed/XODkwNDY4Mjg0" target="youku-videos" rel="nofollow">视频3</a>
-									</div>
-								</div>
-							</div>
-							<div class="col-xs-3 col-sm-12">
-								<div class="row">
-									<div class="col-xs-12 col-sm-2">
-										<a href="http://player.youku.com/embed/XODkxNjQwOTQw" target="youku-videos" rel="nofollow">4</a>
-									</div>
-									<div class="hidden-xs col-sm-10">
-										<a href="http://player.youku.com/embed/XODkxNjQwOTQw" target="youku-videos" rel="nofollow">视频4</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+					<?php get_youku_content(); ?>
 			</div>
 		</div>
 		

@@ -46,14 +46,23 @@
 		</div>
 		
 		<div class="main-content">
-			<h1 class="text-center" style="padding-top:20px;color:#c74a24;font-weight:bold;">教育理念 百花齐放</h1>
+			<h1 class="text-center post_type_title">教育理念 百花齐放</h1>
+			<div class="timeline row">
+				<div class="fluid-container">
+				<div class="col-md-1 col-sm-2 col-xs-3 text-center post_type_direction"><a href="" class="post_type_direction_left"><span class="glyphicon glyphicon-chevron-left"></span></a></div>
+				<?php count_post_by_date('concepts'); ?>
+				<div class="col-md-1 col-sm-2 col-xs-3 text-center post_type_direction"><a href="" class="post_type_direction_right"><span class="glyphicon glyphicon-chevron-right"></span></a></div>
+				</div>
+			</div>
 			<?php 
 				$paged = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;
 				$args = array(
-					'category_name' => 'education-concept',
+					'post_type' 		=> array('concepts'),
 					'posts_per_page' 	=> 10,
 					'orderby'			=> 'date',
 					'order' 			=> 'desc',
+					'year'				=> $_GET['year'] ? $_GET['year'] : '',
+					'monthnum'			=> $_GET['month'] ? $_GET['month'] : '',
 					'paged'				=> $paged,
 				);
 				
@@ -64,9 +73,9 @@
 				<div class="search-list container-fluid">
 				   <div <?php post_class(); ?>>
 
-						<h3 class="page-header">
+						<h2 class="page-header">
 							<a href="<?php the_permalink(); ?>" target="_blank" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'devdmbootstrap3' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
-						</h3>
+						</h2>
 
 						<?php if ( has_post_thumbnail() ) : ?>
 						   <a href="<?php echo get_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
@@ -97,7 +106,7 @@
 				</div>
 			</div>
 			<?php } else { ?>
-				<?php get_404_template(); ?>
+				<h1 class="text-center" style="padding:40px;">对不起，本月没有文章。</h1>
 			<?php }	?>
 		</div>
 		

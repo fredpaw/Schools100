@@ -1,6 +1,6 @@
 <?php
 /*
-	Template Name:教会中学
+	Template Name:最新消息
 	Author: Fred Zhou
 	Version: 1.0
 */
@@ -46,7 +46,14 @@
 		</div>
 		
 		<div class="main-content">
-			<h1 class="text-center" style="padding-top:20px; font-weight:bold; color:#c74a24;">最新消息</h1>
+			<h1 class="text-center post_type_title">最新消息</h1>
+			<div class="timeline row">
+				<div class="fluid-container">
+				<div class="col-md-1 col-sm-2 col-xs-3 text-center post_type_direction"><a href="" class="post_type_direction_left"><span class="glyphicon glyphicon-chevron-left"></span></a></div>
+				<?php count_post_by_date('news'); ?>
+				<div class="col-md-1 col-sm-2 col-xs-3 text-center post_type_direction"><a href="" class="post_type_direction_right"><span class="glyphicon glyphicon-chevron-right"></span></a></div>
+				</div>
+			</div>
 			<?php 
 				$paged = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;
 				$args = array(
@@ -54,6 +61,8 @@
 					'posts_per_page' 	=> 10,
 					'orderby'			=> 'date',
 					'order' 			=> 'desc',
+					'year'				=> $_GET['year'] ? $_GET['year'] : '',
+					'monthnum'			=> $_GET['month'] ? $_GET['month'] : '',
 					'paged'				=> $paged,
 				);
 				
@@ -97,7 +106,7 @@
 				</div>
 			</div>
 			<?php } else { ?>
-				<?php get_404_template(); ?>
+				<h1 class="text-center" style="padding:40px;">对不起，本月没有文章。</h1>
 			<?php }	?>
 		</div>
 		

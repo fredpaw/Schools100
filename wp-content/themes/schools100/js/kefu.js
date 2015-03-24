@@ -653,10 +653,9 @@ jQuery(document).ready(function($) {
 	var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
 	var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
 	if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
-		$(".qq_pc").addClass("hidden");
-		$(".qq_mobile").removeClass("hidden");
+		
 	} else {
-		$(".qq_pc").removeClass("hidden");
 		$(".qq_mobile").addClass("hidden");
+		$(".qq_pc").removeClass("hidden");
 	}
 });

@@ -156,6 +156,7 @@ function devdmbootstrap3_main_content_width() {
 
 if ( ! isset( $content_width ) ) $content_width = 800;
 
+
 ////////////////////////////////////////////////////////////////////
 // Get site url for links
 ////////////////////////////////////////////////////////////////////
@@ -213,7 +214,7 @@ function add_kefu() {
 }
 
 ////////////////////////////////////////////////////////////////////
-// Add qq kefu.js to header
+// Add qq kefu.js and kefu.css to header
 ////////////////////////////////////////////////////////////////////
 add_action( 'wp_enqueue_scripts', 'add_qq' );
 function add_qq() {
@@ -242,7 +243,21 @@ function add_dist() {
 }
 
 ////////////////////////////////////////////////////////////////////
-// Add dist.js to header
+// Add youku.js to header
+////////////////////////////////////////////////////////////////////
+add_action( 'wp_enqueue_scripts', 'add_youku_js' );
+function add_youku_js() {
+	if(is_home() || is_front_page()){
+		wp_enqueue_script(
+			'youku', // name your script so that you can attach other scripts and de-register, etc.
+			get_stylesheet_directory_uri() . '/js/youku.js', // this is the location of your script file
+			array('jquery') // this array lists the scripts upon which your script depends
+		);
+	}
+}
+
+////////////////////////////////////////////////////////////////////
+// Add recomm.js to header
 ////////////////////////////////////////////////////////////////////
 add_action( 'wp_enqueue_scripts','remove_dist');
 function remove_dist() {
@@ -260,6 +275,133 @@ function add_recomm() {
 		);
 	}
 }
+
+////////////////////////////////////////////////////////////////////
+// Add post date scroll js to the page
+////////////////////////////////////////////////////////////////////
+add_action( 'wp_enqueue_scripts','add_date_scroll');
+function add_date_scroll() {
+	if(is_page('最新消息')) {
+		wp_enqueue_script(
+			'date_scroll',
+			get_stylesheet_directory_uri() . '/js/scroll.js',
+			array('jquery')
+		);
+	}
+	if(is_page('教育理念 百花齐放')) {
+		wp_enqueue_script(
+			'date_scroll',
+			get_stylesheet_directory_uri() . '/js/scroll.js',
+			array('jquery')
+		);
+	}
+}
+
+////////////////////////////////////////////////////////////////////
+// Add scroll style for the home page
+////////////////////////////////////////////////////////////////////
+/*add_action( 'wp_enqueue_scripts','add_scroll_style');
+function add_scroll_style() {
+	if(is_home() || is_front_page()) {
+		wp_enqueue_script(
+			'jscroll', // name your script so that you can attach other scripts and de-register, etc.
+			get_stylesheet_directory_uri() . '/js/jquery.jscrollpane.min.js', // this is the location of your script file
+			array('jquery') // this array lists the scripts upon which your script depends
+		);
+		
+		wp_enqueue_script(
+			'jwheel', // name your script so that you can attach other scripts and de-register, etc.
+			get_stylesheet_directory_uri() . '/js/jquery.mousewheel.js', // this is the location of your script file
+			array('jquery') // this array lists the scripts upon which your script depends
+		);
+		
+		wp_enqueue_style(
+			'jscrollcss',
+			get_stylesheet_directory_uri() . '/css/jquery.jscrollpane.css'
+		);
+	}
+}*/
+
+////////////////////////////////////////////////////////////////////
+// Count post by month for specific post type
+////////////////////////////////////////////////////////////////////
+function count_post_by_date($post_type_name) {
+	$args = array(
+		'post_type' => array('news'),
+		'nopaging'	=> true,
+	);
+	
+	$the_query = new WP_Query($args);
+	
+	if($the_query->have_posts()) {
+		$newest_year = date('Y',strtotime($the_query->posts[0]->post_date));
+		$newest_month = date('m',strtotime($the_query->posts[0]->post_date));
+		$oldest_year = date('Y',strtotime($the_query->posts[$the_query->found_posts - 1]->post_date));
+		$oldest_month = date('m',strtotime($the_query->posts[$the_query->found_posts - 1]->post_date));
+		for( $i = $newest_year; $i >= $oldest_year; $i--) {
+			if ($i == $oldest_year && $i != $newest_year) {
+				for($j = 12; $j >= $oldest_month; $j--) {
+					?>
+					<div class="col-md-2 col-sm-2 col-xs-3 text-center post_type_date hidden"><a href="<?php the_permalink(); ?>?year=<?php echo $i; ?>&month=<?php echo $j; ?>"><?php echo $i; ?>年 <?php echo $j; ?>月</a></div>
+					<?php
+				}
+			} else if ($i == $newest_year && $i != $oldest_year) {
+				for($j = $newest_month;$j > 0; $j--) {
+					?>
+					<div class="col-md-2 col-sm-2 col-xs-3 text-center post_type_date hidden"><a href="<?php the_permalink(); ?>?year=<?php echo $i; ?>&month=<?php echo $j; ?>"><?php echo $i; ?>年 <?php echo $j; ?>月</a></div>
+					<?php
+				}
+			} else if ($i == $newest_year && $i == $oldest_year) {
+				for($j = $newest_month;$j >= $oldest_month; $j--) {
+					?>
+					<div class="col-md-2 col-sm-2 col-xs-3 text-center post_type_date hidden"><a href="<?php the_permalink(); ?>?year=<?php echo $i; ?>&month=<?php echo $j; ?>"><?php echo $i; ?>年 <?php echo $j; ?>月</a></div>
+					<?php
+				}
+			} else {
+				for($j = 12; $j > 0; $j--) {
+					?>
+					<div class="col-md-2 col-sm-2 col-xs-3 text-center post_type_date hidden"><a href="<?php the_permalink(); ?>?year=<?php echo $i; ?>&month=<?php echo $j; ?>"><?php echo $i; ?>年 <?php echo $j; ?>月</a></div>
+					<?php
+				}
+			}
+		}
+	}
+}
+
+////////////////////////////////////////////////////////////////////
+// Get content from Youku API
+////////////////////////////////////////////////////////////////////
+function get_youku_content() {
+	$url = "https://openapi.youku.com/v2/playlists/videos.json?client_id=1715a72477d73c54&playlist_id=23460959";
+	$json = file_get_contents($url);
+	$data = json_decode($json);
+	if (isset($data)) {
+		$total = $data->total;
+		$videos = $data->videos;
+		?>
+		<div class="youku-videos col-sm-8 col-xs-12" id="youku-homepage" name="youku-videos">
+			<iframe name="youku-videos" height="300" width="100%" src="http://player.youku.com/embed/<?php echo $videos[$total-1]->id; ?>" rel="nofollow" frameborder=0 allowfullscreen></iframe>
+		</div>
+		<div class="col-sm-4 col-xs-12 youku-list">
+			<div class="col-xs-1 hidden-sm hidden-md hidden-lg text-center" style="margin:0px;padding:0px;"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></div>
+			<?php
+			$j = 0;
+			for ($i = $total - 1; $i >= 0 ; $i--) {
+				$j++;
+				?>
+				<div class="col-xs-10 col-sm-12 youku-link hidden-xs">
+						<a href="http://player.youku.com/embed/<?php echo $videos[$i]->id; ?>" target="youku-videos" rel="nofollow"><span><?php echo $j;?></span> <span><?php echo $videos[$i]->title; ?></span></a>
+				</div>
+				<?php
+			} ?>
+			<div class="col-xs-1 hidden-sm hidden-md hidden-lg text-center" style="margin:0px;padding:0px;"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
+		</div>
+		<?php
+	} else {
+		
+	}
+}
+
 
 ////////////////////////////////////////////////////////////////////
 // Add instruction page to admin

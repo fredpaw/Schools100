@@ -270,6 +270,28 @@ body {
                 line-height:300px;
             }
         }
+        .post_type_title {
+            padding-top:30px;
+            padding-bottom:30px;
+            font-weight:bold;
+            color:@content-header-title;
+        }
+        .timeline {
+            a {
+                &,
+                &:visited,
+                &:hover,
+                &:active {
+                    text-decoration:none;
+                }
+                &:hover {
+                    color:@news-hover;
+                }
+            }
+            .active {
+                    color:@news-hover;
+            }
+        }
     }
     
     .school-category {
@@ -435,7 +457,6 @@ body {
             .school-map {
                 img {
                     width:100%;
-                    height:100%;
                 }
             }
         }
@@ -489,9 +510,9 @@ body {
         .school-category-list {
             margin-bottom:20px;
             .school-category-thumb {
+                
                 img {
-                    width:100%;
-                    height:100%;
+                    
                 }
             }
             .school-category-detail {
@@ -634,7 +655,6 @@ body {
                 }
                 img {
                         width:100%;
-                        height:100%;
                 }
             }
         }
@@ -643,6 +663,8 @@ body {
     .sina-youku {
         .youku {
             .youku-videos{
+                margin:0px;
+                padding:0px;
                 @media (max-width: @screen-xs-max) {
                     
                 }
@@ -650,10 +672,84 @@ body {
                     
                 }
             }
+            
             .youku-list {
-                div {
-                    padding-left:0;
-                    background-color:#303030;
+                background:@gray-darker;
+                @media (max-width: @screen-xs-max) {
+                    height:30px;
+                    padding:0px;
+                    margin:0px;
+                    .youku-link{
+                        background:@gray-darker;
+                        color:@white;
+                        height:30px;
+                        a {
+                            font-size:16px;
+                            line-height:30px;
+                            color:@gray-lighter;
+                            height:30px;
+                            text-align:center;
+                            &,
+                            &:visited,
+                            &:hover,
+                            &:active {
+                                text-decoration:none;
+                            }
+                            display:block;
+                            width:100%;
+                            height:100%;
+                        }
+                    }
+                    .glyphicon {
+                        color:@gray-lighter;
+                        cursor:pointer;
+                        line-height:30px;
+                        font-size:16px;
+                        margin:0px;
+                        padding:0px;
+                        width:100%;
+                        background-color:@gray-light;
+                        top:0px;
+                    }
+                }
+                @media (min-width: @screen-xs-max) {
+                    overflow-y:auto;
+                    overflow-x:hidden;
+                    height:300px;
+                    margin:0px;
+                    padding:0px;
+                
+                    .youku-link{
+                        background:@gray-darker;
+                        color:@white;
+                        height:55px;
+                        padding:10px 0px 5px 0px;
+                        a {
+                            font-size:14px;
+                            line-height:20px;
+                            padding:0 10px;
+                            color:@gray-lighter;
+                            height:40px;
+                            &,
+                            &:visited,
+                            &:hover,
+                            &:active {
+                                text-decoration:none;
+                            }
+                            display:block;
+                            width:100%;
+                            height:100%;
+                            &:active {
+                                background-color:@gray;
+                            }
+                        }
+                        &:hover {
+                            background-color:@gray-light;
+                        }
+                    }
+                    .active {
+                        background:@gray-base;
+                    }
                 }
             }
         }
@@ -751,6 +847,7 @@ body {
         height:100%;
         img {
             width:100%;
+            min-height:140px;
         }
     }
 }

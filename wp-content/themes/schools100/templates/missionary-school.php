@@ -140,8 +140,10 @@
 			<?php while ( $the_query->have_posts() ) : $the_query->the_post();?>
 			<div class="school-category-list row">
 				<div class="container-fluid">
-					<div class="school-category-thumb col-md-3 col-sm-4 col-xs-12">
-					<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
+					<div class="school-category-thumb col-md-3 col-sm-4 col-xs-12 text-center">
+					<p style="text-align:center;">
+					<a href="<?php the_permalink(); ?>" class="text-center"><?php the_post_thumbnail(); ?></a>
+					</p>
 					</div>
 					<div class="col-md-9 col-sm-8 col-xs-12">
 					<div class="school-category-detail">
