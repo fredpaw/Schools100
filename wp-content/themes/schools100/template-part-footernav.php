@@ -11,7 +11,7 @@
 		</div>
 	</div>
 	<div class="ad-scroll">
-	 <?php echo do_shortcode('[ivrss-gallery type="GROUP2" display="1" height="144" random="No" speed="3" waitseconds="3"]'); ?>
+	 <?php echo do_shortcode('[metaslider id=427]'); ?>
 	</div>
 	<div class="office-contact row">
 		<div class="office-email">

@@ -1,4 +1,11 @@
 jQuery(document).ready(function($){
+	if($(window).width() >= 750) {
+		$('.youku-list').slimScroll({
+			color: '#eee',
+			height: '300px'
+		});
+	}
+	
 	index = 0;
 	total = $('.youku-link').length;
 	$('.youku-link').eq(index).removeClass('hidden-xs').addClass('active');

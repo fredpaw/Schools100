@@ -298,29 +298,18 @@ function add_date_scroll() {
 }
 
 ////////////////////////////////////////////////////////////////////
-// Add scroll style for the home page
+// Add slim scroll to youku section
 ////////////////////////////////////////////////////////////////////
-/*add_action( 'wp_enqueue_scripts','add_scroll_style');
-function add_scroll_style() {
+add_action( 'wp_enqueue_scripts', 'add_youku_scroll' );
+function add_youku_scroll() {
 	if(is_home() || is_front_page()) {
 		wp_enqueue_script(
-			'jscroll', // name your script so that you can attach other scripts and de-register, etc.
-			get_stylesheet_directory_uri() . '/js/jquery.jscrollpane.min.js', // this is the location of your script file
+			'slimscroll', // name your script so that you can attach other scripts and de-register, etc.
+			get_stylesheet_directory_uri() . '/js/jquery.slimscroll.min.js', // this is the location of your script file
 			array('jquery') // this array lists the scripts upon which your script depends
-		);
-		
-		wp_enqueue_script(
-			'jwheel', // name your script so that you can attach other scripts and de-register, etc.
-			get_stylesheet_directory_uri() . '/js/jquery.mousewheel.js', // this is the location of your script file
-			array('jquery') // this array lists the scripts upon which your script depends
-		);
-		
-		wp_enqueue_style(
-			'jscrollcss',
-			get_stylesheet_directory_uri() . '/css/jquery.jscrollpane.css'
 		);
 	}
-}*/
+}
 
 ////////////////////////////////////////////////////////////////////
 // Count post by month for specific post type
@@ -406,5 +395,5 @@ function get_youku_content() {
 ////////////////////////////////////////////////////////////////////
 // Add instruction page to admin
 ////////////////////////////////////////////////////////////////////
-	require_once('instruction.php');
+	require_once('instruction/index.php');
 ?>

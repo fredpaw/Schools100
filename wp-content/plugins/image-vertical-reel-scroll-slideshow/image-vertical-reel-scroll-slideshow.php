@@ -107,7 +107,7 @@ function ivrss()
 		$ivrss_height1 = $ivrss_scrollerheight."px";
 		?>
 		<div style="padding-top:8px;padding-bottom:8px;">
-			<div style="text-align:left;vertical-align:middle;text-decoration: none;overflow: hidden; position: relative; margin-left: 1px; height: <?php echo $ivrss_height1; ?>;" id="ivrss_holder1">
+			<div style="text-align:center;vertical-align:middle;text-decoration: none;overflow: hidden; position: relative; margin-left: 1px; height: <?php echo $ivrss_height1; ?>;" id="ivrss_holder1">
 				<?php echo $ivrss_html; ?>
 			</div>
 		</div>
@@ -306,7 +306,7 @@ function ivrss_shortcode( $atts )
 		$ivrss_pluginurl = get_option('siteurl') . "/wp-content/plugins/image-vertical-reel-scroll-slideshow";
 		
 		$ivrss = $ivrss .'<div style="padding-top:8px;padding-bottom:8px;">';
-			$ivrss = $ivrss .'<div style="text-align:left;vertical-align:middle;text-decoration: none;overflow: hidden; position: relative; margin-left: 1px; height:'.$ivrss_height1.'" id="ivrss_holder2">';
+			$ivrss = $ivrss .'<div style="text-align:center;vertical-align:middle;text-decoration: none;overflow: hidden; position: relative; margin-left: 1px; height:'.$ivrss_height1.'" id="ivrss_holder2">';
 				$ivrss = $ivrss . $ivrss_html;
 			$ivrss = $ivrss .'</div>';
 		$ivrss = $ivrss .'</div>';
