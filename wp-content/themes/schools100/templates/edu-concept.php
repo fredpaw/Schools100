@@ -29,19 +29,14 @@
         <div class="row top-search"><?php echo get_search_form(); ?></div>
 		
 		<div class="row content-header">
-			<div class="col-sm-3 text-center hidden-xs">
-				<img src="<?php bloginfo('template_url'); ?>/img/student.png" />
+			<div class="content-header-title">
+				<img src="<?php bloginfo('template_url');?>/img/header.jpg" />
 			</div>
-			<div class="col-sm-9 col-xs-12">
-				<div class="content-header-title">
-					<h1>帮您找个好学校</h1>
-				</div>
-				<div class="content-header-link">
-					<div class="col-xs-6 col-sm-3"><a href="<?php bloginfo('url'); ?>/basic-info/">基本信息</a></div>
-					<div class="col-xs-6 col-sm-3"><a href="<?php bloginfo('url'); ?>/service-concept/">服务理念</a></div>
-					<div class="col-xs-6 col-sm-3"><a href="<?php bloginfo('url'); ?>/aeas-test/">AEAS测试</a></div>
-					<div class="col-xs-6 col-sm-3"><a href="<?php bloginfo('url'); ?>/contact-us/">联系我们</a></div>
-				</div>
+			<div class="content-header-link">
+				<div class="col-xs-12 col-sm-6 col-md-3 text-center"><a href="<?php bloginfo('url'); ?>/basic-info/">基本信息</a></div>
+				<div class="col-xs-12 col-sm-6 col-md-3 text-center"><a href="<?php bloginfo('url'); ?>/service-concept/">服务理念</a></div>
+				<div class="col-xs-12 col-sm-6 col-md-3 text-center"><a href="<?php bloginfo('url'); ?>/aeas-test/">AEAS测试</a></div>
+				<div class="col-xs-12 col-sm-6 col-md-3 text-center"><a href="<?php bloginfo('url'); ?>/contact-us/">联系我们</a></div>
 			</div>
 		</div>
 		

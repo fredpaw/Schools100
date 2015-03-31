@@ -243,6 +243,18 @@ function add_dist() {
 }
 
 ////////////////////////////////////////////////////////////////////
+// Add scroll-top.js to header
+////////////////////////////////////////////////////////////////////
+add_action( 'wp_enqueue_scripts', 'add_scroll_top' );
+function add_scroll_top() {
+    wp_enqueue_script(
+        'scrolltop', // name your script so that you can attach other scripts and de-register, etc.
+        get_stylesheet_directory_uri() . '/js/scroll-top.js', // this is the location of your script file
+        array('jquery') // this array lists the scripts upon which your script depends
+    );
+}
+
+////////////////////////////////////////////////////////////////////
 // Add youku.js to header
 ////////////////////////////////////////////////////////////////////
 add_action( 'wp_enqueue_scripts', 'add_youku_js' );
@@ -271,6 +283,20 @@ function add_recomm() {
 		wp_enqueue_script(
 			'recommended', // name your script so that you can attach other scripts and de-register, etc.
 			get_stylesheet_directory_uri() . '/js/recomm.js', // this is the location of your script file
+			array('jquery') // this array lists the scripts upon which your script depends
+		);
+	}
+}
+
+////////////////////////////////////////////////////////////////////
+// Add preview.js to header
+////////////////////////////////////////////////////////////////////
+add_action( 'wp_enqueue_scripts', 'add_preview' );
+function add_preview() {
+	if (is_page('联系我们')) {
+		wp_enqueue_script(
+			'previewjs', // name your script so that you can attach other scripts and de-register, etc.
+			get_stylesheet_directory_uri() . '/js/preview.js', // this is the location of your script file
 			array('jquery') // this array lists the scripts upon which your script depends
 		);
 	}

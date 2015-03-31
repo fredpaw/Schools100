@@ -30,6 +30,7 @@
 			<li>
 				<p style="font-weight:bold">SEO填写</p>
 				<img src="<?php echo bloginfo('template_url'); ?>/img/instruction/post_8.jpg" />
+				<p><b>关键字一般为2-3个，最多不要超过5个。</b></p>
 			</li>
 			<br>
 			<li>

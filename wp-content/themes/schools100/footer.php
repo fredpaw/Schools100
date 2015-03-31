@@ -7,7 +7,7 @@
                 </div>
         <?php endif; ?>
     </div>
-
+	<div id="scroll-up"><span class="glyphicon glyphicon-circle-arrow-up" aria-hidden="true"></span></div>
 </div>
 <!-- end main container -->
 <?php wp_footer(); ?>
