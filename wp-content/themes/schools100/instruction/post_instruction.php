@@ -36,6 +36,7 @@
 			<li>
 				<p style="font-weight:bold">特色图像</p>
 				<p>特色图像可以根据文章的需求添加。<span style="color:red;">学校介绍的文章必须添加特色图像，图像为学校的校徽图案。</span></p>
+				<p>顾问的介绍文章，<span style="color:red">必须添加二维码为特色图像。</span></p>
 			</li>
 			<br>
 			<li>
@@ -43,6 +44,14 @@
 				<img src="<?php echo bloginfo('template_url'); ?>/img/instruction/post_5.jpg" />
 				<p>目前已添加的自定义栏目如上所示。</p>
 				<p>学校介绍的文章的自定义栏目请按如下顺序添加：<span style="color:red">高中学费、入学要求、学生人数、建立时间</span></p>
+				<p>顾问的介绍文章，<span style="color:red">需要添加顾问QQ到consultant_qq一栏。</span></p>
+			</li>
+			<br>
+			<li>
+				<p style="font-weight:bold">分类目录的选择</p>
+				<p>分类目录可以单选和多选。</p>
+				<p>学校介绍文章可以选择多个分类，例如一所学校可以是<span style="color:red">教会中学</span><span style="color:red">，男子中学</span><span style="color:red">，寄宿中学</span>并位于<span style="color:red">维多利亚州</span></p>
+				<p><span style="color:orange;">顾问介绍文章只能是单选，选择是北京，墨尔本或者是悉尼的顾问即可。</span></p>
 			</li>
 			<br>
 			<li>

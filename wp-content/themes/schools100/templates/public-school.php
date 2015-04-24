@@ -71,7 +71,7 @@
 					?>
 						<div class="school-intro-block">
 							<div class="school-intro">
-								<div class="school-intro-title"><a href="<?php the_permalink(); ?>"><h3 class="text-center"><?php the_title();?></h3></a></div>
+								<div class="school-intro-title" id="title-2"><a href="<?php the_permalink(); ?>"><h3 class="text-center"><?php the_title();?></h3></a></div>
 								<div class="school-intro-content"><?php the_excerpt(); ?></div>
 							</div>
 						</div>
