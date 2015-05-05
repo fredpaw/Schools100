@@ -196,28 +196,30 @@
 			<div class="row">
 				<div class="col-sm-6 col-xs-6">
 					<h4>澳洲中学</h4>
-					<p><a href="">名校推荐</a></p>
-					<p><a href="">教会中学</a></p>
-					<p><a href="">公立中学</a></p>
-					<p><a href="">私立中学</a></p>
-					<p><a href="">贵族中学</a></p>
-					<p><a href="">特长中学</a></p>
-					<p><a href="">男子中学</a></p>
-					<p><a href="">混合中学</a></p>
-					<p><a href="">寄宿中学</a></p>
-					<p><a href="">女子中学</a></p>
-					<p><a href="">IB中学</a></p>
+					<p><a href="<?php bloginfo('url') ?>/recommended-schools/">名校推荐</a></p>
+					<p><a href="<?php bloginfo('url') ?>/missionary-school/">教会中学</a></p>
+					<p><a href="<?php bloginfo('url') ?>/public-school/">公立中学</a></p>
+					<p><a href="<?php bloginfo('url') ?>/private-school/">私立中学</a></p>
+					<p><a href="<?php bloginfo('url') ?>/international-school/">国际中学</a></p>
+					<p><a href="<?php bloginfo('url') ?>/elite-school/">贵族中学</a></p>
+					<p><a href="<?php bloginfo('url') ?>/specialty-school/">特长中学</a></p>
+					<p><a href="<?php bloginfo('url') ?>/boy-school/">男子中学</a></p>
+					<p><a href="<?php bloginfo('url') ?>/girl-school/">混合中学</a></p>
+					<p><a href="<?php bloginfo('url') ?>/boarding-school/">寄宿中学</a></p>
+					<p><a href="<?php bloginfo('url') ?>/girl-school/">女子中学</a></p>
+					<p><a href="<?php bloginfo('url') ?>/ib-school/">IB中学</a></p>
+					<p><a href="<?php bloginfo('url') ?>/university-foundation/">大学预科</a></p>
 				</div>
 				<div class="col-sm-6 col-xs-6">
 					<h4>澳洲中学分布</h4>
-					<p><a href="">新南威尔士州NSW</a></p>
-					<p><a href="">维多利亚州VIC</a></p>
-					<p><a href="">昆士兰州QLD</a></p>
-					<p><a href="">南澳大利亚州SA</a></p>
-					<p><a href="">西澳大利亚州WA</a></p>
-					<p><a href="">首都直辖区ACT</a></p>
-					<p><a href="">塔斯马尼亚TAS</a></p>
-					<p><a href="">北领地NT</a></p>
+					<p><a href="<?php bloginfo('url') ?>/new-south-wales-schools/">新南威尔士州NSW</a></p>
+					<p><a href="<?php bloginfo('url') ?>/victoria-schools/">维多利亚州VIC</a></p>
+					<p><a href="<?php bloginfo('url') ?>/queensland-schools/">昆士兰州QLD</a></p>
+					<p><a href="<?php bloginfo('url') ?>/south-australia-schools/">南澳大利亚州SA</a></p>
+					<p><a href="<?php bloginfo('url') ?>/western-australia-schools/">西澳大利亚州WA</a></p>
+					<p><a href="<?php bloginfo('url') ?>/act-schools/">首都直辖区ACT</a></p>
+					<p><a href="<?php bloginfo('url') ?>/tasmania-schools/">塔斯马尼亚TAS</a></p>
+					<p><a href="<?php bloginfo('url') ?>/north-territory-schools/">北领地NT</a></p>
 				</div>
 			</div>
 		</div>
@@ -225,20 +227,22 @@
 			<div class="row">
 				<div class="col-sm-6 col-xs-6">
 					<h4>我们的服务</h4>
-					<p><a href="">基本信息</a></p>
-					<p><a href="">服务理念</a></p>
-					<p><a href="">联系我们</a></p>
-					<p><a href="">ASES测试</a></p>
+					<p><a href="<?php bloginfo('url') ?>/recent-news/">最新信息</a></p>
+					<p><a href="<?php bloginfo('url') ?>/basic-info/">基本信息</a></p>
+					<p><a href="<?php bloginfo('url') ?>/service-concept/">服务理念</a></p>
+					<p><a href="<?php bloginfo('url') ?>/service-concept/">联系我们</a></p>
+					<p><a href="<?php bloginfo('url') ?>/aeas-test/">ASES测试</a></p>
 					<br>
 					<br>
 					<p><img src="<?php bloginfo('template_url'); ?>/img/website_qr_bottom.png" /></p>
 				</div>
 				<div class="col-sm-6 col-xs-6">
 					<h4>澳洲文化</h4>
-					<p><a href="">访澳之旅</a></p>
-					<p><a href="">教育理念</a></p>
+					<p><a href="<?php bloginfo('url') ?>/self-experience/">访澳之旅</a></p>
+					<p><a href="<?php bloginfo('url') ?>/education-concept/">教育理念</a></p>
 					<h4>家长园地</h4>
 					<p><a href="http://www.aoloo.org/forum.php?mod=forumdisplay&fid=127" target="_blank">家长园地</a></p>
+					<p>&nbsp;</p>
 					<br>
 					<p style="margin-top:10px;"><img src="<?php bloginfo('template_url'); ?>/img/weixin_qr_bottom.png" /></p>
 				</div>
